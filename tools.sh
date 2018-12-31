@@ -38,11 +38,9 @@ casks=(
   firefox
   geekbench
   google-chrome
-  github-desktop
   gpg-suite
   handbrake
   iina
-  java8
   sloth
   spectacle
   visual-studio-code
@@ -53,9 +51,6 @@ gems=(
   bundler
 )
 
-gpg --full-generate-key
-read gpgkey
-gpg_key=$gpgkey
 git_email='programming.dmende@hotmail.com'
 git_configs=(
   "branch.autoSetupRebase always"
@@ -66,7 +61,6 @@ git_configs=(
   "push.default simple"
   "user.name dennismende"
   "user.email ${git_email}"
-  "user.signingkey ${gpg_key}"
 )
 
 vscode=(
@@ -149,12 +143,11 @@ do
 done
 
 if [[ -z "${CI}" ]]; then
-  gpg --keyserver hkp://pgp.mit.edu --recv ${gpg_key}
   prompt "Export key to Github"
   ssh-keygen -t rsa -b 4096 -C ${git_email}
   pbcopy < ~/.ssh/id_rsa.pub
   open https://github.com/settings/ssh/new
-fi  
+fi
 
 prompt "Install software"
 install 'brew cask install' "${casks[@]}"
@@ -177,7 +170,6 @@ m update install all
 
 prompt "Cleanup"
 brew cleanup
-brew cask cleanup
 
 prompt "Install Oh_My_ZSH"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
