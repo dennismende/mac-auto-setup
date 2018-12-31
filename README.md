@@ -21,3 +21,5 @@ Check terminal output after automatic installation and restart so that all chang
 
 ### Google Chrome
 
+### Outbank
+1. Manually download from Mac App Store

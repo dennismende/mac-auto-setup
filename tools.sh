@@ -31,6 +31,7 @@ brews=(
 )
 
 casks=(
+  1password
   cakebrew
   docker
   dropbox
