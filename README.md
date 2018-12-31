@@ -21,6 +21,11 @@ Check terminal output after automatic installation and restart so that all chang
 ### Oh_My_ZSH
 1. [Oh_My_ZSH Configuration](https://github.com/robbyrussell/oh-my-zsh)
 
+### Z
+1. [Z](https://github.com/rupa/z)
+2. Add path, visible after brew installation, to .zshrc
+3. Add .z file to user folder
+
 ### Firefox
 1. Configure basic settings
 

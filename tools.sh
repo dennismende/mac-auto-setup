@@ -28,6 +28,7 @@ brews=(
   stormssh
   thefuck
   "wget --with-iri"
+  z
 )
 
 casks=(
