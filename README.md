@@ -17,6 +17,7 @@ Check terminal output after automatic installation and restart so that all chang
 
 ### VSCode
 1. [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+2. [Jetbrains Mono - Font](https://dev.to/shofol/how-to-use-jetbrainsmono-in-vscode-jb8)
 
 ### Oh_My_ZSH
 1. [Oh_My_ZSH Configuration](https://github.com/robbyrussell/oh-my-zsh)
